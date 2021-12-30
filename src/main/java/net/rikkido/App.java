@@ -1,56 +1,41 @@
 package net.rikkido;
 
-import org.bukkit.block.Block;
-import org.bukkit.block.data.type.Fence;
-import org.bukkit.configuration.Configuration;
-import org.bukkit.configuration.serialization.ConfigurationSerializable;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityCategory;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
-import org.bukkit.entity.Slime;
-import org.bukkit.entity.Zombie;
-import org.bukkit.event.Event;
-import org.bukkit.event.EventHandler;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.lang.System.Logger;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Vector;
 
-import javax.naming.directory.InvalidAttributesException;
-import javax.xml.stream.events.Namespace;
-
-import org.bukkit.*;
-import org.bukkit.event.player.*;
-import org.bukkit.inventory.EquipmentSlot;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.persistence.PersistentDataType;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
-import org.bukkit.util.io.BukkitObjectInputStream;
-import org.bukkit.util.io.BukkitObjectOutputStream;
-import org.json.simple.ItemList;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.World;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Slime;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntityDropItemEvent;
-import org.bukkit.event.entity.EntityUnleashEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.entity.PlayerLeashEntityEvent;
 import org.bukkit.event.hanging.HangingBreakByEntityEvent;
-import org.bukkit.event.hanging.HangingBreakEvent;
-import org.bukkit.util.*;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerToggleSneakEvent;
+import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.util.io.BukkitObjectInputStream;
+import org.bukkit.util.io.BukkitObjectOutputStream;
 
 /**
  * Hello world!
